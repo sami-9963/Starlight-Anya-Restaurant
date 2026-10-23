@@ -19,7 +19,7 @@ Designed with a bespoke **Black & Gold** luxury aesthetic, this multi-page respo
      - 🇮🇳 **Indian**: Royal Murgh Makhani (Butter Chicken), Kashmiri Mutton Rogan Josh, Paneer Tikka Lababdar, Garlic Naan.
      - 🇮🇹 **Italian**: Black Truffle Fettuccine Alfredo, Wood-Fired Diavola & Burrata Pizza, Beef Lasagna Bolognese.
      - 🇨🇳 **Chinese**: Szechuan Firecracker Chili Chicken, Golden Jumbo Kung Pao Prawns, Crystal Dim Sum, Hakka Chowmein.
-     - 🇺🇸 **American**: Starlight Gold Wagyu Smash Burger, Smoked Texas BBQ Short Ribs, Nashville Hot Chicken Burger.
+     - 🇺🇸 **American & Continental**: Royal Beef Wellington, Norwegian Salmon Wellington, Starlight Gold Wagyu Smash Burger, Smoked Texas BBQ Short Ribs, Nashville Hot Chicken Burger.
      - 🇲🇽 **Mexican**: Birria Beef Tacos with Consomé, Sizzling Fajitas Trio, Loaded Anya Fiesta Nachos Supreme.
      - 🍹 **Beverages & Desserts**: 24K Gold Signature Mocktail, Royal Saffron Borhani, Spanish Gold Iced Latte, Molten Lava Cake, Venetian Tiramisu.
    - Realistic pricing in Bangladeshi Taka (**৳**), formatted to upscale Gulshan standards.

@@ -219,7 +219,33 @@ const menuData = [
         cuisineName: "Chinese"
     },
 
-    // --- AMERICAN CUISINE ---
+    // --- AMERICAN & CONTINENTAL CUISINE ---
+    {
+        id: "am-wellington-beef",
+        name: "Royal Beef Wellington",
+        category: "american",
+        price: 2150,
+        formattedPrice: "৳2,150",
+        description: "The classic Beef Wellington (Wallington): prime aged beef tenderloin enveloped in savory mushroom duxelles, crêpe, and baked in crisp golden puff pastry. Served with truffle jus and asparagus.",
+        tags: ["Chef Special", "Premium Cut", "Halal"],
+        spiceLevel: 1,
+        image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80",
+        calories: "890 kcal",
+        cuisineName: "Continental / American"
+    },
+    {
+        id: "am-wellington-salmon",
+        name: "Norwegian Salmon Wellington",
+        category: "american",
+        price: 1850,
+        formattedPrice: "৳1,850",
+        description: "Delicate Salmon Wellington (Wallington): prime Norwegian salmon fillet layered with garlic creamed spinach and herbs inside flaky golden puff pastry with citrus dill velouté.",
+        tags: ["Chef Special", "Seafood", "Freshly Baked"],
+        spiceLevel: 1,
+        image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80",
+        calories: "740 kcal",
+        cuisineName: "Continental / American"
+    },
     {
         id: "am-1",
         name: "Starlight Gold Wagyu Smash Burger",
