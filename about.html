@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us & Hygiene Standards | Starlight Anya Restaurant Gulshan</title>
+    <meta name="description" content="Discover Starlight Anya Restaurant's commitment to 5-star hygiene, kitchen cleanliness, master cooks, and attentive waiters in Saidnagar, Gulshan, Dhaka.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#d4af37',
+                            light: '#f5e297',
+                            dark: '#aa841e',
+                            glow: 'rgba(212, 175, 55, 0.4)'
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Luxury Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#070709] text-gray-100 font-sans selection:bg-[#d4af37] selection:text-black">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-[#0d0d12] via-[#1a1711] to-[#0d0d12] border-b border-[#d4af37]/25 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-gray-300">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5 text-[#f5e297]">
+                    <i class="fa-regular fa-clock text-[#d4af37]"></i> Open Daily: <strong>6:00 AM – 2:00 AM</strong>
+                </span>
+                <span class="hidden md:inline text-gray-500">•</span>
+                <span class="hidden md:flex items-center gap-1.5 text-gray-300">
+                    <i class="fa-solid fa-location-dot text-[#d4af37]"></i> Saidnagar, Gulshan, Dhaka-1212
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+8801711234567" class="hover:text-[#d4af37] transition-colors flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-[#d4af37] text-[11px]"></i> +880 1711-234567
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header id="main-navbar" class="sticky top-0 z-50 bg-[#070709]/95 backdrop-blur-md border-b border-[#d4af37]/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full border border-[#d4af37] flex items-center justify-center bg-gradient-to-br from-[#1c180e] to-black shadow-lg">
+                    <i class="fa-solid fa-star text-[#d4af37] text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider gold-text-gradient block leading-tight">
+                        STARLIGHT ANYA
+                    </span>
+                    <span class="text-[10px] uppercase font-cinzel tracking-[0.28em] text-[#d4af37]/80 block">
+                        Restaurant • Gulshan
+                    </span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="nav-link font-cinzel text-sm uppercase tracking-wider">Home</a>
+                <a href="about.html" class="nav-link active font-cinzel text-sm uppercase tracking-wider">About & Hygiene</a>
+                <a href="menu.html" class="nav-link font-cinzel text-sm uppercase tracking-wider">Menu</a>
+                <a href="reservation.html" class="nav-link font-cinzel text-sm uppercase tracking-wider">Reservations</a>
+                <a href="contact.html" class="nav-link font-cinzel text-sm uppercase tracking-wider">Location & Map</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="reservation.html" class="btn-gold text-xs uppercase tracking-wider py-2.5 px-6">
+                    <i class="fa-regular fa-calendar-check text-sm"></i> Reserve Table
+                </a>
+            </div>
+
+            <button id="mobile-toggle" aria-label="Toggle Navigation" class="lg:hidden p-2 rounded text-[#d4af37] focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#0c0c12] border-b border-[#d4af37]/30 px-6 py-6">
+            <div class="flex flex-col gap-4">
+                <a href="index.html" class="mobile-nav-link text-gray-300 font-cinzel text-base py-2 border-b border-gray-800">Home</a>
+                <a href="about.html" class="mobile-nav-link text-[#f5e297] font-cinzel text-base py-2 border-b border-gray-800">About & Hygiene</a>
+                <a href="menu.html" class="mobile-nav-link text-gray-300 font-cinzel text-base py-2 border-b border-gray-800">Cuisine Menu</a>
+                <a href="reservation.html" class="mobile-nav-link text-gray-300 font-cinzel text-base py-2 border-b border-gray-800">Table Reservations</a>
+                <a href="contact.html" class="mobile-nav-link text-gray-300 font-cinzel text-base py-2 border-b border-gray-800">Contact & Map</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="py-20 bg-gradient-to-b from-[#12121c] to-[#070709] border-b border-[#d4af37]/20 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <span class="badge-gold mb-3">Our Standards of Excellence</span>
+            <h1 class="text-4xl sm:text-6xl font-cinzel font-bold text-white mb-4">
+                The Starlight Anya Story
+            </h1>
+            <p class="text-gray-300 font-playfair italic text-lg max-w-2xl mx-auto">
+                Founded on the premise that exquisite taste is meaningless without uncompromising hygiene, surgical kitchen standards, and genuine warmth.
+            </p>
+        </div>
+    </section>
+
+    <!-- Hygiene & Cleanliness Deep Dive -->
+    <section class="py-20 bg-[#070709]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase font-cinzel tracking-widest text-[#d4af37] block mb-2">
+                    5-Star Cleanliness Charter
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-cinzel font-bold text-white mb-4">
+                    Our Hygiene & Cleanliness Protocols
+                </h2>
+                <div class="gold-divider">
+                    <i class="fa-solid fa-shield-virus text-xs text-[#d4af37]"></i>
+                </div>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    Every plate served at Starlight Anya in Saidnagar, Gulshan undergoes stringent safety scrutiny. Here is how we guarantee complete peace of mind.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="luxury-card p-8 rounded-xl text-left border-t-2 border-t-[#d4af37]">
+                    <div class="w-14 h-14 rounded-lg bg-[#1a1711] border border-[#d4af37] flex items-center justify-center text-[#d4af37] text-2xl mb-6">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="font-cinzel text-lg font-bold text-white mb-3">UV-C Cutlery Sterilization</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                        All forks, spoons, knives, and wine glasses are put through an 85°C thermal rinse followed by sealed UV-C chambers to eradicate 99.99% of pathogens before sealing in individual protective covers.
+                    </p>
+                    <span class="text-xs text-[#f5e297] font-semibold flex items-center gap-1.5">
+                        <i class="fa-solid fa-check-double"></i> 100% Medical-Grade Sterilization
+                    </span>
+                </div>
+
+                <div class="luxury-card p-8 rounded-xl text-left border-t-2 border-t-[#d4af37]">
+                    <div class="w-14 h-14 rounded-lg bg-[#1a1711] border border-[#d4af37] flex items-center justify-center text-[#d4af37] text-2xl mb-6">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="font-cinzel text-lg font-bold text-white mb-3">Transparent Open Kitchen</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                        We have nothing to hide. Our glass-paneled kitchen allows you to witness the stainless steel cleanliness, chef gloves, hairnets, and organized food stations as your meals are cooked live.
+                    </p>
+                    <span class="text-xs text-[#f5e297] font-semibold flex items-center gap-1.5">
+                        <i class="fa-solid fa-check-double"></i> Transparent Culinary Theatre
+                    </span>
+                </div>
+
+                <div class="luxury-card p-8 rounded-xl text-left border-t-2 border-t-[#d4af37]">
+                    <div class="w-14 h-14 rounded-lg bg-[#1a1711] border border-[#d4af37] flex items-center justify-center text-[#d4af37] text-2xl mb-6">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <h3 class="font-cinzel text-lg font-bold text-white mb-3">Cold-Chain Traceability</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                        From Padma River Hilsa fish to imported USDA beef cuts and Italian cheeses, all perishables are stored in independent temperature-calibrated refrigerators to prevent cross-contamination.
+                    </p>
+                    <span class="text-xs text-[#f5e297] font-semibold flex items-center gap-1.5">
+                        <i class="fa-solid fa-check-double"></i> Zero Preservatives or Additives
+                    </span>
+                </div>
+            </div>
+
+            <!-- Kitchen Image Banner -->
+            <div class="rounded-2xl overflow-hidden border border-[#d4af37]/30 relative shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1600&q=80" alt="Spotless Kitchen" class="w-full h-80 sm:h-96 object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-8 sm:p-12">
+                    <span class="text-xs font-cinzel uppercase tracking-widest text-[#d4af37] mb-1">Kitchen Transparency</span>
+                    <h3 class="text-2xl sm:text-3xl font-cinzel font-bold text-white">Inspected Daily. Sanitized Hourly.</h3>
+                    <p class="text-gray-300 text-sm max-w-xl mt-2">
+                        Operating from 6:00 AM breakfast to 2:00 AM late-night dining with uninterrupted hygiene discipline.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Cooks Brigade -->
+    <section class="py-20 bg-[#0c0c12] border-t border-[#d4af37]/15">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase font-cinzel tracking-widest text-[#d4af37] block mb-2">
+                    Culinary Maestros
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-cinzel font-bold text-white mb-4">
+                    Meet Our Master Cooks & Chefs
+                </h2>
+                <div class="gold-divider">
+                    <i class="fa-solid fa-hat-chef text-xs text-[#d4af37]"></i>
+                </div>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    Our kitchen brigade brings together specialized master chefs with international culinary degrees and decades in luxury five-star hospitality.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Chef 1 -->
+                <div class="luxury-card rounded-xl overflow-hidden group">
+                    <div class="h-72 overflow-hidden bg-neutral-900 relative">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80" alt="Executive Chef" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 badge-gold">18 Years Experience</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-cinzel text-lg font-bold text-white">Chef Kabir Hossain</h3>
+                        <p class="text-xs text-[#d4af37] font-semibold mb-3">Executive Chef • Heritage & Mughlai Specialist</p>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            Master of authentic Dhakaiya Kacchi, Chittagong Kala Bhuna, and royal Lucknowi tandoor dishes. Celebrated for slow-simmered dum cooking and secret hand-ground spices.
+                        </p>
+                        <div class="text-xs text-gray-500 flex items-center gap-2">
+                            <i class="fa-solid fa-award text-[#d4af37]"></i> Certified Master of Bangladeshi & Indian Gastronomy
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chef 2 -->
+                <div class="luxury-card rounded-xl overflow-hidden group">
+                    <div class="h-72 overflow-hidden bg-neutral-900 relative">
+                        <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=600&q=80" alt="Italian & Continental Chef" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 badge-gold">14 Years Experience</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-cinzel text-lg font-bold text-white">Chef Marco R. & Team</h3>
+                        <p class="text-xs text-[#d4af37] font-semibold mb-3">Continental & Italian Pasta Master</p>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            Trained in Tuscany and Milan, crafting daily handmade ribbon pasta, black truffle emulsions, and wood-fired artisanal pizzas with 48-hour slow fermented dough.
+                        </p>
+                        <div class="text-xs text-gray-500 flex items-center gap-2">
+                            <i class="fa-solid fa-award text-[#d4af37]"></i> Artisanal Neapolitan Pizza Certification
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chef 3 -->
+                <div class="luxury-card rounded-xl overflow-hidden group">
+                    <div class="h-72 overflow-hidden bg-neutral-900 relative">
+                        <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=600&q=80" alt="Wok & Grill Specialist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 badge-gold">12 Years Experience</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-cinzel text-lg font-bold text-white">Chef David Chen</h3>
+                        <p class="text-xs text-[#d4af37] font-semibold mb-3">Asian Wok & American Grill Specialist</p>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            Master of high-heat Cantonese wok-tossing, fiery Szechuan chili seasonings, Wagyu smash burgers, and slow hickory-smoked Texas short ribs.
+                        </p>
+                        <div class="text-xs text-gray-500 flex items-center gap-2">
+                            <i class="fa-solid fa-award text-[#d4af37]"></i> Master of Modern Fusion & Wok Artistry
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attentive Waiters & White-Glove Hospitality -->
+    <section class="py-20 bg-[#070709] border-t border-[#d4af37]/15">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs uppercase font-cinzel tracking-widest text-[#d4af37] block mb-2">
+                        The Soul of Starlight Anya
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-cinzel font-bold text-white mb-6">
+                        Courteous, Well-Groomed & Attentive Waitstaff
+                    </h2>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 font-playfair italic">
+                        "Great food satisfies the appetite, but genuine hospitality touches the soul."
+                    </p>
+                    <div class="space-y-4 text-sm text-gray-400">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-[#d4af37] mt-1"></i>
+                            <div>
+                                <strong class="text-white">Bilingual & Etiquette Trained:</strong>
+                                Fluent in both English and Bengali, trained in traditional fine-dining silver service.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-[#d4af37] mt-1"></i>
+                            <div>
+                                <strong class="text-white">Dietary & Allergen Mastery:</strong>
+                                Every server is thoroughly briefed on spice levels, gluten-free, nut allergies, and dairy content across our 7 menus.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-[#d4af37] mt-1"></i>
+                            <div>
+                                <strong class="text-white">Unobtrusive & Anticipatory:</strong>
+                                Refilling your crystal water glass, clearing courses silently, and attending to table needs without interrupting your conversations.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="reservation.html" class="btn-gold py-3 px-8 text-xs uppercase tracking-wider">
+                            Book A Table Experience
+                        </a>
+                    </div>
+                </div>
+
+                <div class="rounded-xl overflow-hidden border border-[#d4af37]/30 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" alt="Attentive Waiter Service" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#050507] border-t border-[#d4af37]/20 pt-16 pb-12 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="font-cinzel text-xl font-bold gold-text-gradient block mb-2">STARLIGHT ANYA RESTAURANT</span>
+            <p class="text-xs text-gray-400 mb-6">Saidnagar, Gulshan, Dhaka-1212 • Open 6:00 AM – 2:00 AM Daily</p>
+            <div class="flex justify-center gap-6 text-xs text-gray-400 mb-6">
+                <a href="index.html" class="hover:text-[#d4af37]">Home</a>
+                <a href="about.html" class="hover:text-[#d4af37]">About & Hygiene</a>
+                <a href="menu.html" class="hover:text-[#d4af37]">Menu</a>
+                <a href="reservation.html" class="hover:text-[#d4af37]">Reservations</a>
+                <a href="contact.html" class="hover:text-[#d4af37]">Location</a>
+            </div>
+            <p class="text-[11px] text-gray-600">&copy; 2026 Starlight Anya Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/8801711234567" target="_blank" class="floating-whatsapp" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

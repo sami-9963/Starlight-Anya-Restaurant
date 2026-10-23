@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Reservations & VIP Lounge | Starlight Anya Restaurant Gulshan</title>
+    <meta name="description" content="Book a luxury dining table or VIP Gold Lounge at Starlight Anya Restaurant in Saidnagar, Gulshan, Dhaka-1212. Open 6:00 AM to 2:00 AM.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#d4af37',
+                            light: '#f5e297',
+                            dark: '#aa841e',
+                            glow: 'rgba(212, 175, 55, 0.4)'
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Luxury Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#070709] text-gray-100 font-sans selection:bg-[#d4af37] selection:text-black">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-[#0d0d12] via-[#1a1711] to-[#0d0d12] border-b border-[#d4af37]/25 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-gray-300">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5 text-[#f5e297]">
+                    <i class="fa-regular fa-clock text-[#d4af37]"></i> Open Daily: <strong>6:00 AM – 2:00 AM</strong>
+                </span>
+                <span class="hidden md:inline text-gray-500">•</span>
+                <span class="hidden md:flex items-center gap-1.5 text-gray-300">
+                    <i class="fa-solid fa-location-dot text-[#d4af37]"></i> Saidnagar, Gulshan, Dhaka-1212
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+8801711234567" class="hover:text-[#d4af37] transition-colors flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-[#d4af37] text-[11px]"></i> +880 1711-234567
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header id="main-navbar" class="sticky top-0 z-50 bg-[#070709]/95 backdrop-blur-md border-b border-[#d4af37]/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full border border-[#d4af37] flex items-center justify-center bg-gradient-to-br from-[#1c180e] to-black shadow-lg">
+                    <i class="fa-solid fa-star text-[#d4af37] text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider gold-text-gradient block leading-tight">
+                        STARLIGHT ANYA
+                    </span>
+                    <span class="text-[10px] uppercase font-cinzel tracking-[0.28em] text-[#d4af37]/80 block">
+                        Restaurant • Gulshan
+                    </span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="nav-link font-cinzel text-sm uppercase tracking-wider">Home</a>
+                <a href="about.html" class="nav-link font-cinzel text-sm uppercase tracking-wider">About & Hygiene</a>
+                <a href="menu.html" class="nav-link font-cinzel text-sm uppercase tracking-wider">Menu</a>
+                <a href="reservation.html" class="nav-link active font-cinzel text-sm uppercase tracking-wider">Reservations</a>
+                <a href="contact.html" class="nav-link font-cinzel text-sm uppercase tracking-wider">Location & Map</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="#booking-form" class="btn-gold text-xs uppercase tracking-wider py-2.5 px-6">
+                    <i class="fa-regular fa-calendar-check text-sm"></i> Book A Table
+                </a>
+            </div>
+
+            <button id="mobile-toggle" aria-label="Toggle Navigation" class="lg:hidden p-2 rounded text-[#d4af37] focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#0c0c12] border-b border-[#d4af37]/30 px-6 py-6">
+            <div class="flex flex-col gap-4">
+                <a href="index.html" class="mobile-nav-link text-gray-300 font-cinzel text-base py-2 border-b border-gray-800">Home</a>
+                <a href="about.html" class="mobile-nav-link text-gray-300 font-cinzel text-base py-2 border-b border-gray-800">About & Hygiene</a>
+                <a href="menu.html" class="mobile-nav-link text-gray-300 font-cinzel text-base py-2 border-b border-gray-800">Cuisine Menu</a>
+                <a href="reservation.html" class="mobile-nav-link text-[#f5e297] font-cinzel text-base py-2 border-b border-gray-800">Reservations</a>
+                <a href="contact.html" class="mobile-nav-link text-gray-300 font-cinzel text-base py-2 border-b border-gray-800">Location & Map</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="py-20 bg-gradient-to-b from-[#12121c] to-[#070709] border-b border-[#d4af37]/20 relative overflow-hidden text-center">
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <span class="badge-gold mb-3">Guaranteed Seating & Hospitality</span>
+            <h1 class="text-4xl sm:text-6xl font-cinzel font-bold text-white mb-4">
+                Reserve Your Experience
+            </h1>
+            <p class="text-gray-300 font-playfair italic text-lg">
+                Join us for breakfast, business lunches, sunset tea, lavish dinners, or late-night midnight dining until 2:00 AM.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seating Zones Overview -->
+    <section class="py-20 bg-[#070709]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase font-cinzel tracking-widest text-[#d4af37] block mb-2">
+                    Atmospheric Zones
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-cinzel font-bold text-white mb-4">
+                    Choose Your Preferred Ambiance
+                </h2>
+                <div class="gold-divider">
+                    <i class="fa-solid fa-crown text-xs text-[#d4af37]"></i>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+                <div class="luxury-card rounded-xl overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="The Grand Hall" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="badge-gold mb-2">Signature Dining</span>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">The Grand Starlight Hall</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            Featuring imported Austrian chandeliers, Italian black marble columns, and comfortable velvet chairs. Ideal for family dinners and celebratory banquets.
+                        </p>
+                        <span class="text-xs text-gray-500"><i class="fa-solid fa-users text-[#d4af37] mr-1"></i> Up to 80 Guests</span>
+                    </div>
+                </div>
+
+                <div class="luxury-card rounded-xl overflow-hidden border-[#d4af37]/60">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" alt="VIP Gold Lounge" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="bg-[#d4af37] text-black text-[11px] font-bold px-2.5 py-0.5 rounded-full inline-block mb-2">VIP Exclusive</span>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">VIP Anya Gold Lounge</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            Private soundproof lounge with gold-gilded interiors, dedicated butler service, and custom chef tasting menus for VIP diplomats and corporate summits.
+                        </p>
+                        <span class="text-xs text-gray-500"><i class="fa-solid fa-user-shield text-[#d4af37] mr-1"></i> Up to 25 Guests (Private)</span>
+                    </div>
+                </div>
+
+                <div class="luxury-card rounded-xl overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=800&q=80" alt="Outdoor Terrace" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="badge-gold mb-2">Al-Fresco Breeze</span>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">Starlight Outdoor Terrace</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            Dhaka’s premier open-air terrace with ambient fairy lighting and skyline view. The prime spot for midnight mocktails and late dining until 2:00 AM.
+                        </p>
+                        <span class="text-xs text-gray-500"><i class="fa-solid fa-moon text-[#d4af37] mr-1"></i> Open till 2:00 AM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Form Anchor -->
+            <div id="booking-form" class="max-w-4xl mx-auto glass-panel-gold p-8 sm:p-12 rounded-2xl shadow-2xl border border-[#d4af37]">
+                <div class="text-center mb-8">
+                    <span class="text-xs font-cinzel uppercase tracking-widest text-[#d4af37]">Fast Confirmation</span>
+                    <h2 class="text-2xl sm:text-3xl font-cinzel font-bold text-white mt-1">Book Your Table</h2>
+                    <p class="text-xs text-gray-400 mt-1">Tables held for 15 minutes past reservation time. Free cancellation anytime.</p>
+                </div>
+
+                <form id="reservation-form" class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-cinzel text-gray-300 uppercase tracking-wider mb-1.5">Full Name *</label>
+                            <input type="text" id="res-name" required placeholder="e.g. Asif Mahmud" 
+                                   class="w-full px-4 py-3 bg-[#0d0d13] border border-[#d4af37]/30 rounded text-sm text-white focus:outline-none focus:border-[#d4af37]">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-cinzel text-gray-300 uppercase tracking-wider mb-1.5">Phone Number (Dhaka / Int'l) *</label>
+                            <input type="tel" id="res-phone" required placeholder="e.g. +880 1711-XXXXXX" 
+                                   class="w-full px-4 py-3 bg-[#0d0d13] border border-[#d4af37]/30 rounded text-sm text-white focus:outline-none focus:border-[#d4af37]">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-cinzel text-gray-300 uppercase tracking-wider mb-1.5">Email Address</label>
+                            <input type="email" id="res-email" placeholder="asif@example.com" 
+                                   class="w-full px-4 py-3 bg-[#0d0d13] border border-[#d4af37]/30 rounded text-sm text-white focus:outline-none focus:border-[#d4af37]">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-cinzel text-gray-300 uppercase tracking-wider mb-1.5">Number of Guests *</label>
+                            <select id="res-guests" class="w-full px-4 py-3 bg-[#0d0d13] border border-[#d4af37]/30 rounded text-sm text-white focus:outline-none focus:border-[#d4af37]">
+                                <option value="1">1 Person (Solo Dining)</option>
+                                <option value="2" selected>2 Persons (Romantic / Couple Table)</option>
+                                <option value="3">3 Persons</option>
+                                <option value="4">4 Persons (Family Table)</option>
+                                <option value="5-8">5 to 8 Persons (Grand Feast)</option>
+                                <option value="9-15">9 to 15 Persons (Corporate Meeting)</option>
+                                <option value="15+">15+ Persons (VIP Lounge Private Party)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-cinzel text-gray-300 uppercase tracking-wider mb-1.5">Reservation Date *</label>
+                            <input type="date" id="res-date" required 
+                                   class="w-full px-4 py-3 bg-[#0d0d13] border border-[#d4af37]/30 rounded text-sm text-white focus:outline-none focus:border-[#d4af37]">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-cinzel text-gray-300 uppercase tracking-wider mb-1.5">Dining Time Slot (6 AM - 2 AM) *</label>
+                            <select id="res-time" required class="w-full px-4 py-3 bg-[#0d0d13] border border-[#d4af37]/30 rounded text-sm text-white focus:outline-none focus:border-[#d4af37]">
+                                <option value="" disabled selected>Select dining time slot</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-cinzel text-gray-300 uppercase tracking-wider mb-1.5">Preferred Dining Ambiance</label>
+                        <select id="res-zone" class="w-full px-4 py-3 bg-[#0d0d13] border border-[#d4af37]/30 rounded text-sm text-white focus:outline-none focus:border-[#d4af37]">
+                            <option value="The Grand Starlight Hall">The Grand Starlight Hall (Chandelier Centerpiece)</option>
+                            <option value="VIP Anya Gold Lounge">VIP Anya Gold Lounge (Private Exclusive Room)</option>
+                            <option value="Starlight Outdoor Terrace">Starlight Outdoor Terrace (Open Air Late Night)</option>
+                            <option value="Candlelight Booth">Candlelight Romantic Booth</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-cinzel text-gray-300 uppercase tracking-wider mb-1.5">Special Dietary Needs or Celebration Notes</label>
+                        <textarea id="res-notes" rows="3" placeholder="Anniversary decor, flower arrangement, high-chair for toddler, nut allergies, etc." 
+                                  class="w-full px-4 py-3 bg-[#0d0d13] border border-[#d4af37]/30 rounded text-sm text-white focus:outline-none focus:border-[#d4af37]"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full btn-gold py-4 text-sm uppercase tracking-wider font-bold">
+                        <i class="fa-solid fa-check-circle mr-2"></i> Submit & Receive Confirmation
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Modal Component -->
+    <div id="confirmation-modal" class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-panel-gold max-w-md w-full p-8 rounded-xl text-center relative border border-[#d4af37]">
+            <div class="w-16 h-16 rounded-full bg-[#d4af37]/15 border border-[#d4af37] flex items-center justify-center mx-auto mb-4 text-[#d4af37] text-2xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="font-cinzel text-2xl font-bold text-white mb-1">Reservation Received!</h3>
+            <p class="text-xs text-gray-400 mb-6">We look forward to welcoming you to Starlight Anya.</p>
+
+            <div id="conf-details" class="bg-[#0b0b10] p-4 rounded-lg text-left mb-6 border border-[#d4af37]/20">
+                <!-- Injected via main.js -->
+            </div>
+
+            <div class="flex flex-col gap-3">
+                <a id="conf-whatsapp-btn" href="#" target="_blank" class="btn-gold py-3 text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i> Send Booking to WhatsApp Hotline
+                </a>
+                <button onclick="closeConfirmationModal()" class="btn-outline-gold py-2.5 text-xs uppercase tracking-wider">
+                    Done & Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#050507] border-t border-[#d4af37]/20 pt-16 pb-12 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="font-cinzel text-xl font-bold gold-text-gradient block mb-2">STARLIGHT ANYA RESTAURANT</span>
+            <p class="text-xs text-gray-400 mb-6">Saidnagar, Gulshan, Dhaka-1212 • Open 6:00 AM – 2:00 AM Daily</p>
+            <div class="flex justify-center gap-6 text-xs text-gray-400 mb-6">
+                <a href="index.html" class="hover:text-[#d4af37]">Home</a>
+                <a href="about.html" class="hover:text-[#d4af37]">About & Hygiene</a>
+                <a href="menu.html" class="hover:text-[#d4af37]">Menu</a>
+                <a href="reservation.html" class="hover:text-[#d4af37]">Reservations</a>
+                <a href="contact.html" class="hover:text-[#d4af37]">Location</a>
+            </div>
+            <p class="text-[11px] text-gray-600">&copy; 2026 Starlight Anya Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/8801711234567" target="_blank" class="floating-whatsapp" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

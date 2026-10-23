@@ -1,0 +1,414 @@
+/* ==========================================================================
+   Starlight Anya Restaurant - Luxury Black & Gold Design System
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-primary: #070709;
+    --bg-secondary: #0f0f14;
+    --bg-card: #15151d;
+    --bg-card-hover: #1c1c27;
+    
+    --gold-primary: #d4af37;
+    --gold-light: #f5e297;
+    --gold-dark: #aa841e;
+    --gold-glow: rgba(212, 175, 55, 0.35);
+    
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-gold: #e5be49;
+    
+    --border-gold: rgba(212, 175, 55, 0.22);
+    --border-gold-bright: rgba(212, 175, 55, 0.6);
+    
+    --font-heading: 'Cinzel', serif;
+    --font-subheading: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    
+    --gold-gradient: linear-gradient(135deg, #fce9a4 0%, #d4af37 50%, #8f6a10 100%);
+    --gold-gradient-hover: linear-gradient(135deg, #ffffff 0%, #f5e297 50%, #d4af37 100%);
+    --dark-gradient: linear-gradient(180deg, rgba(7,7,9,0.95) 0%, rgba(15,15,20,0.98) 100%);
+}
+
+/* Base Resets & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Luxury Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #09090c;
+}
+::-webkit-scrollbar-thumb {
+    background: #4a3b12;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-primary);
+}
+
+/* Typography Helpers */
+.font-cinzel {
+    font-family: var(--font-heading);
+}
+
+.font-playfair {
+    font-family: var(--font-subheading);
+}
+
+.font-sans {
+    font-family: var(--font-body);
+}
+
+.gold-text-gradient {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.gold-border {
+    border: 1px solid var(--border-gold);
+}
+
+.gold-border-glow:hover {
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+/* Background Atmospheric Starfield & Glow */
+.gold-glow-orb {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(7, 7, 9, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Glassmorphism Container */
+.glass-panel {
+    background: rgba(18, 18, 25, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-gold);
+}
+
+.glass-panel-gold {
+    background: rgba(22, 20, 27, 0.88);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+}
+
+/* Luxury Gold Buttons */
+.btn-gold {
+    background: var(--gold-gradient);
+    color: #0c0c10;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.85rem 2rem;
+    border-radius: 4px;
+    transition: all 0.35s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+}
+
+.btn-gold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transition: left 0.6s ease;
+    z-index: -1;
+}
+
+.btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.45);
+    color: #000;
+}
+
+.btn-gold:hover::before {
+    left: 100%;
+}
+
+.btn-outline-gold {
+    background: transparent;
+    color: var(--gold-light);
+    border: 1px solid var(--gold-primary);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.85rem 2rem;
+    border-radius: 4px;
+    transition: all 0.35s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    cursor: pointer;
+}
+
+.btn-outline-gold:hover {
+    background: rgba(212, 175, 55, 0.12);
+    border-color: var(--gold-light);
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Badges */
+.badge-gold {
+    background: rgba(212, 175, 55, 0.12);
+    color: var(--gold-light);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+/* Shimmer & Glow Keyframes */
+@keyframes goldPulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.45);
+    }
+}
+
+.pulse-gold {
+    animation: goldPulse 3.5s infinite ease-in-out;
+}
+
+/* Card Hover Effects */
+.luxury-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-gold);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.luxury-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, 0.55);
+    box-shadow: 0 18px 40px -15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.15);
+}
+
+/* Image Hover Zoom */
+.img-zoom-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.img-zoom-container img {
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-zoom-container:hover img {
+    transform: scale(1.08);
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #25D366;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+    z-index: 999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+    color: #fff;
+}
+
+.floating-whatsapp .tooltip {
+    position: absolute;
+    right: 70px;
+    background: #111116;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-family: var(--font-body);
+    white-space: nowrap;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(8px);
+}
+
+.floating-whatsapp:hover .tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Decorative Divider */
+.gold-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem auto;
+}
+
+.gold-divider::before,
+.gold-divider::after {
+    content: '';
+    height: 1px;
+    width: 70px;
+    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 4, 6, 0.94);
+    backdrop-filter: blur(12px);
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.lightbox-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-content {
+    max-width: 900px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-gold-bright);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 35px rgba(212, 175, 55, 0.25);
+    background: #111118;
+}
+
+/* Toast Notifications */
+.toast-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 1200;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.toast {
+    background: #15151f;
+    border: 1px solid var(--gold-primary);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 15px rgba(212, 175, 55, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.92rem;
+    transform: translateX(120%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+/* Navigation Blur & Active Link */
+.nav-scrolled {
+    background: rgba(8, 8, 11, 0.95) !important;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+}
+
+.nav-link {
+    position: relative;
+    color: #e2e8f0;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold-gradient);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--gold-light);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--gold-light);
+    font-weight: 600;
+}
